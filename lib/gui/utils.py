@@ -178,34 +178,64 @@ class Images(metaclass=Singleton):
         self.previewtrain = dict()
         self.errcount = 0
 
+        # self.icons = dict()
+        # self.icons["folder"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "open_folder.png"))
+        # self.icons["load"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "open_file.png"))
+        # self.icons["context"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "open_file.png"))
+        # self.icons["save"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "save.png"))
+        # self.icons["reset"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "reset.png"))
+        # self.icons["clear"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "clear.png"))
+        # self.icons["graph"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "graph.png"))
+        # self.icons["zoom"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "zoom.png"))
+        # self.icons["move"] = tk.PhotoImage(file=os.path.join(
+        #     self.pathicons,
+        #     "move.png"))
+
         self.icons = dict()
-        self.icons["folder"] = tk.PhotoImage(file=os.path.join(
+        self.icons["folder"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "open_folder.png"))
-        self.icons["load"] = tk.PhotoImage(file=os.path.join(
+            "open_folder.png")))
+        self.icons["load"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "open_file.png"))
-        self.icons["context"] = tk.PhotoImage(file=os.path.join(
+            "open_file.png")))
+        self.icons["context"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "open_file.png"))
-        self.icons["save"] = tk.PhotoImage(file=os.path.join(
+            "open_file.png")))
+        self.icons["save"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "save.png"))
-        self.icons["reset"] = tk.PhotoImage(file=os.path.join(
+            "save.png")))
+        self.icons["reset"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "reset.png"))
-        self.icons["clear"] = tk.PhotoImage(file=os.path.join(
+            "reset.png")))
+        self.icons["clear"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "clear.png"))
-        self.icons["graph"] = tk.PhotoImage(file=os.path.join(
+            "clear.png")))
+        self.icons["graph"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "graph.png"))
-        self.icons["zoom"] = tk.PhotoImage(file=os.path.join(
+            "graph.png")))
+        self.icons["zoom"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "zoom.png"))
-        self.icons["move"] = tk.PhotoImage(file=os.path.join(
+            "zoom.png")))
+        self.icons["move"] = ImageTk.PhotoImage(Image.open(os.path.join(
             self.pathicons,
-            "move.png"))
+            "move.png")))
+
         logger.debug("Initialized %s: (icons: %s)", self.__class__.__name__, self.icons)
 
     def delete_preview(self):

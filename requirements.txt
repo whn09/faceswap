@@ -13,6 +13,7 @@ Keras==2.2.4
 cmake
 dlib
 face_recognition
+pynvx
 
 # tensorflow is included within the docker image.
 # If you are looking for dependencies for a manual install,
